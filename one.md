@@ -1,3 +1,8 @@
+**멋쟁이 사자처럼 - 백엔드 Django 세미나 (❁´◡`❁)
+**
+
+학습 목표 1. RDB(Relational DataBase)를 알 수 있다.
+
 ### CRUD
 
 - Create, Read, Update, Delete
