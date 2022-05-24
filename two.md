@@ -1,8 +1,8 @@
 # 멋쟁이 사자처럼 - 백엔드 Django 세미나 (❁´◡`❁)
 
-## 2. Model을 구성할 수 있다.
+## 📌 2. Model을 구성할 수 있다.
 
-## - model 생성하기 
+## model 생성하기 
 
 > 데이터베이스에 반영될 테이블의 형식을 클래스로 정의한다.
 
@@ -17,9 +17,9 @@ blog 안에 데이터베이스를 생성하기 위해 클래스를 정의한다.
 - 모델(클래스)안의 각 요소(각각의 열) 이 어떤 데이터 타입으로 구성되어 있는지를 명시할 것
    - 명시방법 : 요소이름 =  models.필드메소드()
    - 필드 메소드 종류
-      - models.CharField : 문자열을 저장하는 필드임을 명시
-      - models.TextField : 대용량 문자열을 저장하는 필드임을 명시
-      - models.DataTimeField() : 날짜 형식 필드
+        - models.CharField : 문자열을 저장하는 필드임을 명시
+        - models.TextField : 대용량 문자열을 저장하는 필드임을 명시
+        - models.DataTimeField() : 날짜 형식 필드
    
 ![](https://velog.velcdn.com/images/msung99/post/b9343b28-dfe8-4421-969b-5d643eb57e4b/image.png)
 
@@ -27,7 +27,7 @@ blog 안에 데이터베이스를 생성하기 위해 클래스를 정의한다.
 
 ---
 
-## - model 생성 후 변경사항 반영하기
+## model 생성 후 변경사항 반영하기
 
 변경사항이 담긴 파일을 생성한다.
 $ python manage.py makemigrations
@@ -44,7 +44,7 @@ $ python manage.py migrate
 
 ---
 
-## - model 객체 직접 확인하기
+## model 객체 직접 확인하기
 
 - admin 사이트에서 우리가 만든 model(클래스)의 객체를 직접 눈으로 확인할 수 있다.
 
