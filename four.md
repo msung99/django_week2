@@ -1,7 +1,7 @@
 
-- html form 외에도 Django form 을 활용해 사용자로 부터 입력받은 데이터를 데이터베이스에 저장할 수 있다.
+## 🧙‍♂️ 4. Django form 을 통해 model 객체 생성하기
 
-
+html form 외에도 Django form 을 활용해 사용자로 부터 입력받은 데이터를 데이터베이스에 저장할 수 있음
 
 ---
 
@@ -12,14 +12,13 @@
 
 ![](https://velog.velcdn.com/images/msung99/post/40829167-47d8-42eb-b7cb-bc69627d8deb/image.png)
 
-
 ---
 
 ### urls.py
 
 - "formcreate/" 라는 url 을 등록해준다. 
 
-- name, 즉 namespace 를 'formcreate' 로 지정해줬으므로 이동해야 하는 url 도 index.html 에서 보듯이 formcreate 로 지정해준다.
+- name, 즉 namespace 를 'formcreate' 로 지정해줬으므로 이동해야 하는 url 도 index.html 에서 보듯이 formcreate 로 지정해줌
 
 ![](https://velog.velcdn.com/images/msung99/post/b8b56fac-2cf6-4288-86e3-47e6087a3299/image.png)
 
@@ -120,17 +119,18 @@ def formcreate(request):
 
 즉, 우리가 입력할 수 있는 form 을 우리 브라우저에 갖다줘! 라고 요청하는 것
 
-- html form 으로 form.as_ul 를 적용했을 때
+#### html form 으로 form.as_ul 를 적용했을 때
 ![](https://velog.velcdn.com/images/msung99/post/3f179fa4-4791-49cb-98d0-2f933956fd34/image.png)
 
 
-- html form 으로 form.as_tale 을 적용했을 때
+#### html form 으로 form.as_tale 을 적용했을 때
+
 ![](https://velog.velcdn.com/images/msung99/post/20a68cce-52e9-4247-8a89-0b220b3f4a58/image.png)
 
 
 ---
 
-### 정리
+### ✏ 정리
 
 ![](https://velog.velcdn.com/images/msung99/post/bdefc01c-f5f1-40e7-a705-c5af71f462ef/image.png)
 
