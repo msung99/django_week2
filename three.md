@@ -1,71 +1,71 @@
-### 장고가 model 객체를 입력받는 방법들
+## 🧙‍♂️ 3. Django 에서 model 객체를 추가하는 방법 중 하나인 "HTML form" 에 대해 알아봅시다.
 
 
-- 장고를 이용해 form 을 만드는 방법. 즉, model 객체를 추가하는 방법 3가지는 아래와 같다.
+### 📌 장고를 이용해 form 을 만드는 방법. 즉, model 객체를 추가하는 방법 3가지
 
 
 > Django 에서 사용자 입력을 받는 방법
-1. HTML Form 을 이용하기 
+#### 1. HTML Form 을 이용하기 
    - HTML Form 을 이용해서 model 객체를 추가하는 방법. 즉, 데이터베이스에 반영하는 방법
----
-2. Django Form 을 이용하기
+
+#### 2. Django Form 을 이용하기
 - 장고가 기본적으로 제공하는 form 을 이용해서 model 객체를 추가하는 방법
----
-3. Django modelForm 을 이용하기
+
+#### 3. Django modelForm 을 이용하기
 - 우리가 만든 model 을 기반으로 만들어진 장고가 기본적으로 제공하고 있는 modelForm 을 이용해서 model 객체를 추가하는 방법
 
 
 ---
 
-### html form
+### 💻 html form
 
 - 장고는 model 객체, 즉 데이터베이스에 반영할 html form 을 아주 잘 지원해줌
 
-admin 사이트에서만 글을 보지말고, html 에다 글을 직접 작성하고, 수정하고, 추가하는 행위를 html form 으로 구성해보자. 
+admin 사이트에서만 글을 보지말고, html 에다 글을 직접 작성하고, 수정하고, 추가하는 행위를 html form 으로 구성 가능함
 
 
 ---
 
-### 예시
+### 💻 예시
 
 - index.html 에서 "새 글 작성" 이라는 버튼을 누르면
 새로운 html(new.html) 로 이동해서 그 html 에서 글을 작성한후, 
-"글 생성" 버튼을 누르면 실제로 블로그 글이 만들어지는 프로그램을 만들어보자.
+"글 생성" 버튼을 누르면 실제로 블로그 글이 만들어지는 프로그램을 만들어보자
 
 아래와 같은 index.html 화면에서 "새 글 작성" 버튼을 누르면
 
 ![](https://velog.velcdn.com/images/msung99/post/919b4c4f-6e1a-485b-bbff-3d0144dc4d02/image.png)
 
-아래와 같은 new.html 화면으로 넘어가서 글을 작성후 POST 요청을 보내서 model 객체를 생성 가능하다.
+아래와 같은 new.html 화면으로 넘어가서 글을 작성후 POST 요청을 보내서 model 객체를 생성 가능
 
 ![](https://velog.velcdn.com/images/msung99/post/5f679afc-20e6-43c3-be19-b3ea94169074/image.png)
 
 
 ---
 
-### models.py 의 Blog 클래스
+### 💻 models.py 의 Blog 클래스
 
 ![](https://velog.velcdn.com/images/msung99/post/77ee5797-716a-4f3c-af7c-1b4b96773595/image.png)
 
 
 ---
 
-### urls.py 내용 
+### 💻 urls.py 내용 
 
 ![](https://velog.velcdn.com/images/msung99/post/2ed4b994-f58d-4d5b-a609-b1db7d70fabd/image.png)
 
 ---
 
-### index.html 내용
+### 💻 index.html 내용
 
-- index.html 에서 new.html 로 이동할 수 있도록 url 을 만든다.
+- index.html 에서 new.html 로 이동할 수 있도록 url 을 만든다
 
 ![](https://velog.velcdn.com/images/msung99/post/c9e6b982-52f2-43d0-9de0-1e6f3df1dfae/image.png)
 
 ---
 
 
-### new.html 내용
+### 💻 new.html 내용
 
 > 핵심기능 : 사용자가 데이터들을 작성후, form 태그를 이용해서 POST 요청을 보냄
 
@@ -104,7 +104,7 @@ admin 사이트에서만 글을 보지말고, html 에다 글을 직접 작성�
 
 ---
 
-### views.py 내용
+### 💻 views.py 내용
 
 > 핵심기능 : redirect
 
@@ -112,16 +112,17 @@ admin 사이트에서만 글을 보지말고, html 에다 글을 직접 작성�
 ![](https://velog.velcdn.com/images/msung99/post/55201d8a-0cd3-4d25-beac-fd9e8d96fc89/image.png)
 
 
-- from .models import Blog
-    - create 함수는 Blog 객체 (model 객체) 를 만들어주는 함수 이므로, Blog 클래스를 import
+#### from .models import Blog
+    
+ - create 함수는 Blog 객체 (model 객체) 를 만들어주는 함수 이므로, Blog 클래스를 import
 
-- from django.utils import timezone
+#### from django.utils import timezone
 
 
-- new 함수
+#### new 함수
    - 블로그 글 작성 html form 을 보여주는 함수
 
-- create 함수
+#### create 함수
    - 블로그 글을 저장해주는 함수
    - new.html 에서 POST 요청을 보낸 녀석에 의해서 create 함수가 실행된다.
    - redirect 
@@ -147,21 +148,20 @@ def create(request):
 ---
 
 
-### 정리
-흐름을 파악해보자.
+###  🎁 정리
 
 
-1. views.py 파일의 함수 하나를 실행시켜서 GET 요청으로 index.html 으로 html을 화면에 띄움
+- 1.views.py 파일의 함수 하나를 실행시켜서 GET 요청으로 index.html 으로 html을 화면에 띄움
 
-2. index.html 내용의 "새 글 작성" 버튼을 누르면 GET 요청으로 new.html 을 화면에 띄움.
-  - 즉, 버튼을 누르면 index.html 에서 new.html 으로 이동해서 블로그 글 작성 html form 을 보여준다.
+- 2.index.html 내용의 "새 글 작성" 버튼을 누르면 GET 요청으로 new.html 을 화면에 띄움.
+    - 즉, 버튼을 누르면 index.html 에서 new.html 으로 이동해서 블로그 글 작성 html form 을 보여준다.
 
-3. 사용자가 글을 작성후, html form 안에 있는 "글 생성하기" 버튼을 누르면 view.py 파일의 create 함수가 실행되면서 url 인 '(기본경로)/create' 으로 POST 요청을 보낸다.
+- 3.사용자가 글을 작성후, html form 안에 있는 "글 생성하기" 버튼을 누르면 view.py 파일의 create 함수가 실행되면서 url 인 '(기본경로)/create' 으로 POST 요청을 보냄
 
-4. 즉, POST 요청을 통해 Blog 객체(model 객체), 즉 테이블 객체가 생성되고, redirect 를 통해 다시 index.html 을 화면에 띄운다.
+- 4.즉, POST 요청을 통해 Blog 객체(model 객체), 즉 테이블 객체가 생성되고, redirect 를 통해 다시 index.html 을 화면에 띄움
 
 
-5. 생성된 Blog 객체는 관리자 url 로 접속하면 확인가능함
+- 5.생성된 Blog 객체는 관리자 url 로 접속하면 확인가능
 
 
 
