@@ -1,7 +1,11 @@
-## 🧙‍♂️ 마지막으로, Django ModelForm 으로 model 객체를 생성하는 방법을 알아봅시다!
+# 멋쟁이 사자처럼 - 백엔드 Django 세미나 (❁´◡`❁)
+
+## 📌 3. Form을 이용하여 사용자 입력을 받을 수 있다.
+
+## 🧙‍♂️ 3-3. Django ModelForm을 이용하는 방법을 알아봅시다!
 
 
-### urls.py
+## 1️⃣ urls.py
 
 
 urls.py 에 아래처럼 url 을 등록한다.
@@ -12,7 +16,7 @@ urls.py 에 아래처럼 url 을 등록한다.
 ---
 
 
-### forms.py
+## 2️⃣forms.py
 
 - models.py 파일안에 있는 Blog 를 기반으로 form 을 만들 것이므로,
  from .models import Blog
@@ -35,14 +39,14 @@ class BlogModelForm(forms.ModelForm): # forms.ModelForm 을 상속받음
 
 ---
 
-### index.html
+## 3️⃣ index.html
 
 ![](https://velog.velcdn.com/images/msung99/post/01f52e27-7ca9-4f10-9fae-58d93a66c9d1/image.png)
 
 
 ---
 
-### views.py
+## 4️⃣ views.py
 
 views.py 에서 modelformcreate 함수를 정의한다.
 
