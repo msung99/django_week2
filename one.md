@@ -98,9 +98,8 @@ ex) 수강과목의 데이터 구성은 개설과목의 데이터들로 구성�
 
 > $ python manage.py makemigrations
 
-   - DB 변경사항이 내 프로젝트에서 발생시 DB 변경사항을 담은 파일을 토대로 그 변경사항을 DB에 반영
-      - DB 변경사항을 담은 파일 : 명령어로 자동 생성할 수 있다
-      
+   - DB 변경사항이 내 프로젝트에서 발생시 DB 변경사항을 담은 파일을 생성해줌.
+   - 그 이후 다시 python manage.py migrate를 통해 변경사항을 DB에 반영함.
 
 ex) 실습화면
 
@@ -119,11 +118,12 @@ DB 에 아래와 같은 student 테이블이 있을때
 
 
 ### 🎁요점정리
-- 장고에서는 클래스 객체로 테이블을 정의한다.
-- 테이블 정의시, 즉 클래스를 정의할 때 각각의 데이터가 어떤 자료형을 가지는지 필드 타입을 명시할 것
-- 클래스를 정의하고 DB 한테 python manage.py migration 명령어로 변경사항을 알려줄 것
-- 만일 처음으로 DB 를 초기화 할 경우는 무조건 python manage.py migrate 를 치면 된다.
-- DB 안의 변경사항이 생기면 python manage.py migration 으로 변경사항을 담은 migration 파일을 만들고 python manage.py migrate 를 수행한다.
+- CRUD는 Create Read Update Delete로 데이터 처리를 말한다.
+- 데이터베이스는 데이터를 담는 기본 통이며, DBMS를 통해 관리된다. 
+- 장고의 데이터베이스는 RDBMS를 따르며 클래스 객체로 테이블을 정의한다.
+- 테이블 정의시, 즉 클래스를 정의할 때 각각의 데이터가 어떤 자료형을 가지는지 필드 타입을 명시해야한다.
+- 클래스를 정의하고 DB 한테 python manage.py migration 명령어로 변경사항을 반영해야한다.
+
 
 
 
