@@ -1,11 +1,16 @@
 
-## 🧙‍♂️ 4. Django form 을 통해 model 객체 생성하기
+# 멋쟁이 사자처럼 - 백엔드 Django 세미나 (❁´◡`❁)
+
+## 📌 3. Form을 이용하여 사용자 입력을 받을 수 있다.
+
+
+## 🧙‍♂️ 3-2. Django form 을 통해 model 객체 생성하기
 
 html form 외에도 Django form 을 활용해 사용자로 부터 입력받은 데이터를 데이터베이스에 저장할 수 있음
 
 ---
 
-### index.html 
+## 1️⃣ index.html 
 
 "django form을 이용한 새 글 작성"이라는 버튼을 누르면
 "(기본주소)/new" 라는 url 로 넘어가도록 하자.
@@ -14,7 +19,7 @@ html form 외에도 Django form 을 활용해 사용자로 부터 입력받은 �
 
 ---
 
-### urls.py
+## 2️⃣ urls.py
 
 - "formcreate/" 라는 url 을 등록해준다. 
 
@@ -24,8 +29,8 @@ html form 외에도 Django form 을 활용해 사용자로 부터 입력받은 �
 
 ---
 
-### 새로운 파일 forms.py
-
+## 3️⃣ 새로운 파일 forms.py
+ 
 - blogapp 어플에다가 장고 form 을 정의할 수 있는 새로운 파일 forms.py 을 생성해봤다.
 
 - 장고 form 을 이용해 자동으로 form 을 만드는 이 기능은 클래스로 정의가 가능하다. 
@@ -45,11 +50,11 @@ class BlogForm(forms.Form):  # django 로부터 import 해온 form 을 상속받
 
 ---
 
-### views.py
+## 4️⃣ views.py
 
-> 핵심 : 장고는 사용자로부터 입력값을 받을 수 있는 어떤 url 이 있다면, 한 url 에서 GET 요청과 POST 요청을 둘 다 처리할 수 있게끔 만들 수 있다.
+> 핵심1 : 장고는 사용자로부터 입력값을 받을 수 있는 어떤 url 이 있다면, 한 url 에서 GET 요청과 POST 요청을 둘 다 처리할 수 있게끔 만들 수 있다.
 
-> render의 3번째 인자 => views.py 내의 데이터를 html 에 넘겨줄 수 있다. 단, 딕셔너리 자료형으로 넘겨줘야 한다.
+> 핵심2: render의 3번째 인자 => views.py 내의 데이터를 html 에 넘겨줄 수 있다. 단, 딕셔너리 자료형으로 넘겨줘야 한다.
 
 - forms.py 파일을 기반으로 form 을 만든다.
     - 이를 위해 forms.py 파일에서 정의한 BlogForm 을 import 한다.
@@ -86,7 +91,7 @@ def formcreate(request):
 
 ---
 
-### form_create.html 
+## 5️⃣ form_create.html 
 
 > 핵심 : views.py 에서 render() 의 세번쨰 인자로 넘겨준 데이터는 html 내에서 { { } } 에 감싸진 채로 table 형태로 표현될 수 있다.
 
@@ -119,30 +124,30 @@ def formcreate(request):
 
 즉, 우리가 입력할 수 있는 form 을 우리 브라우저에 갖다줘! 라고 요청하는 것
 
-#### html form 으로 form.as_ul 를 적용했을 때
+### 👉 html form 으로 form.as_ul 를 적용했을 때
 ![](https://velog.velcdn.com/images/msung99/post/3f179fa4-4791-49cb-98d0-2f933956fd34/image.png)
 
 
-#### html form 으로 form.as_tale 을 적용했을 때
+### 👉 html form 으로 form.as_tale 을 적용했을 때
 
 ![](https://velog.velcdn.com/images/msung99/post/20a68cce-52e9-4247-8a89-0b220b3f4a58/image.png)
 
 
 ---
 
-### ✏ 정리
+## 🎁 요점정리(실행화면 위주로)
 
 ![](https://velog.velcdn.com/images/msung99/post/bdefc01c-f5f1-40e7-a705-c5af71f462ef/image.png)
 
-여기서 'django form을 이용한 새 글 작성' 을 누르면 '(기본주소)/formcreate' URL 한테 GET 요청이 날라가고,
+- 여기서 'django form을 이용한 새 글 작성' 을 누르면 '(기본주소)/formcreate' URL 한테 GET 요청이 보내지고,
 
 ![](https://velog.velcdn.com/images/msung99/post/076e4930-ca2a-4878-8658-d43faff64535/image.png)
 
-위와 같이 글을 입력후 '새 글 생성하기' 를 누르면 
+- 위와 같이 글을 입력후 '새 글 생성하기' 를 누르면 
 '(기본주소)/formcreate' URL 에 대해서 POST 요청이 간다.
 
-그러면 우리가 입력한 내용을 바탕으로 우리가 forms.py 에서 정의한 BlogForm 내용에 알맞게 form 객체에 담길 것이다.
+- 그러면 우리가 입력한 내용을 바탕으로 우리가 forms.py 에서 정의한 BlogForm 내용에 알맞게 form 객체에 담길 것이다.
 
-그리고 우리가 입력한 데이터에 대한 유효성을 검증후 models.py 안에 있는 Blog 형식에 알맞게 저장한다. 
+- 그리고 우리가 입력한 데이터에 대한 유효성을 검증후 models.py 안에 있는 Blog 형식에 알맞게 저장한다. 
 
 
