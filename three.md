@@ -155,17 +155,17 @@ def create(request):
 ##  🎁 요점정리(코드 작성 흐름 위주로)
 
 
-- 1.views.py 파일의 함수 하나를 실행시켜서 GET 요청으로 index.html 으로 html을 화면에 띄운다.
+- 1. views.py 파일의 함수 하나를 실행시켜서 GET 요청으로 index.html 으로 html을 화면에 띄운다.
 
-- 2.index.html 내용의 "새 글 작성" 버튼을 누르면 GET 요청으로 new.html 을 화면에 띄운다.
+- 2. index.html 내용의 "새 글 작성" 버튼을 누르면 GET 요청으로 new.html 을 화면에 띄운다.
     - 즉, 버튼을 누르면 index.html 에서 new.html 으로 이동해서 블로그 글 작성 html form 을 보여준다.
 
-- 3.사용자가 글을 작성후, html form 안에 있는 "글 생성하기" 버튼을 누르면 view.py 파일의 create 함수가 실행되면서 url 인 '(기본경로)/create' 으로 POST 요청을 보낸다.
+- 3. 사용자가 글을 작성후, html form 안에 있는 "글 생성하기" 버튼을 누르면 view.py 파일의 create 함수가 실행되면서 url 인 '(기본경로)/create' 으로 POST 요청을 보낸다.
 
 - 4. POST 요청을 통해 Blog 객체(model 객체), 즉 테이블 객체가 생성되고, redirect 를 통해 다시 index.html 을 화면에 띄운다.
 
 
-- 5.생성된 Blog 객체는 관리자 url (주소/admin) 로 접속하면 확인가능하다.
+- 5. 생성된 Blog 객체는 관리자 url (주소/admin) 로 접속하면 확인가능하다.
 
 
 
