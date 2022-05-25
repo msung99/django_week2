@@ -9,7 +9,7 @@
 
 ## 1. RDB(Relational DataBase)를 알 수 있다.
 
-## - CRUD
+## 💻 CRUD
 
 - Create, Read, Update, Delete
 > CRUD : 데이터베이스 안에 어떠한 대상을 저장하고, 저장한 대상을 가공하는 행동
@@ -25,7 +25,7 @@ Delete : 삭제 가능<br>
 
 ---
 
-## - DB(DATABASE)
+## 💻 DB(DATABASE)
 
 - DB : 데이터를 저장하는 커다란 통
 
@@ -69,7 +69,7 @@ ex) 수강과목의 데이터 구성은 개설과목의 데이터들로 구성�
 ---
 
 
-## - Django Models - ORM & Migration
+## 💻 Django Models - ORM & Migration
 
 
 ### #ORM(Object Realtional Mapping)
