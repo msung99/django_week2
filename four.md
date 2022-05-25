@@ -122,7 +122,7 @@ def formcreate(request):
 
 아래처럼, '(기본주소)/formcreate' 에 GET 요청이 보내지면 views.py 의 BlogForm 을 상속한 form 이 자동으로 html form 을 만들어준다.
 
-즉, 우리가 입력할 수 있는 form 을 우리 브라우저에 갖다줘! 라고 요청하는 것
+즉, 우리가 입력할 수 있는 form 을 우리 브라우저에 가져다 달라고 요청하는 것
 
 ### 👉 html form 으로 form.as_ul 를 적용했을 때
 ![](https://velog.velcdn.com/images/msung99/post/3f179fa4-4791-49cb-98d0-2f933956fd34/image.png)
