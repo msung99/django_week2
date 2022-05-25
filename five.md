@@ -2,7 +2,7 @@
 
 ## 📌 3. Form을 이용하여 사용자 입력을 받을 수 있다.
 
-## 🧙‍♂️ 3-3. Django ModelForm을 이용하는 방법을 알아봅시다!
+## 🧙‍♂️ 3-3. Django ModelForm을 이용한 사용자 입력받기
 
 
 ## 1️⃣ urls.py
